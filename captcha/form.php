@@ -5,8 +5,8 @@
  * Date: 2016/10/5 0005
  * Time: 10:43
  */
-
-if (isset($_REQUEST['authentication_code'])) {
+//isset($_REQUEST['authentication_code'])
+if (!!$_REQUEST['authentication_code']) {
     session_start();
 
     if (mb_strtolower($_REQUEST['authentication_code']) == $_SESSION['authentication_code']) {
