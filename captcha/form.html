@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确认验证码</title>
+</head>
+<body>
+<form action="form.php" method="post">
+    <p>验证码图片：
+        <img id="captcha_img" src="index.php?r=javascript:Math.random();" alt="" border="1">
+        <a href="javascript:void(0)" id="change_btn">看不清？</a>
+    </p>
+    <p>请输入图片内容：<input type="text" name="authentication_code" value=""></p>
+    <p><input type="submit" value="提交" style="padding: 6px 20px;"></p>
+</form>
+
+<script>
+    var change_btn = document.getElementById('change_btn');
+    var captcha_img = document.getElementById('captcha_img');
+    change_btn.addEventListener('click', function (e) {
+//        var event = e || window.event;
+//        console.log(event.currentTarget);
+        captcha_img.src = "index.php?r=" + Math.random();
+    }, false)
+</script>
+</body>
+</html>
