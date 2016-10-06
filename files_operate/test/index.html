@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>file_upload_page</title>
+</head>
+<body>
+<form action="index.php" method="post" enctype="multipart/form-data">
+    <p>please select your file that needed to upload:</p>
+    <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
+    <input type="file" name="upload_file" value="Select"
+           accept="image/jpeg,image/png,image/jpg,image/gif,image/swf"><br>
+    <input type="submit" value="Upload">
+</form>
+</body>
+</html>
+
+<!--
+    **************** 上传文件限制 ****************
+    客户端限制：
+    通过表单隐藏域限制上传文件的最大值
+    <input type = "hidden" name = "MAX_FILE_SIZE" value = '字节数'>
+
+    通过accept属性限制上传文件的类型
+    <input type = "file" name = "upload_file" accept = "文件的MIME类型">
+-->

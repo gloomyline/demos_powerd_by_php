@@ -1,3 +1,5 @@
 .idea/
 image_operate/output/*
 captcha/output/*
+/files_operate/imooc/
+/files_operate/uploads/
